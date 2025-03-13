@@ -10,6 +10,7 @@ class CartController extends Controller
 {
     public function index()
     {
+        // harsh
         $cartItems = Cart::where('user_id', Auth::id())->with('product')->get();
         return view('cart.index', compact('cartItems'));
     }
